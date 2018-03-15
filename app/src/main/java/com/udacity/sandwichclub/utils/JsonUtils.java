@@ -17,14 +17,14 @@ public class JsonUtils {
         Log.wtf("Z_json", json);
         try {
             JSONObject jsonObject = new JSONObject(json);
-            JSONObject name = jsonObject.getJSONObject("name");
+            JSONObject name = jsonObject.optJSONObject("name");
 
-            return new Sandwich(name.getString("mainName"),
-                    getListFromJSONArray(name.getJSONArray("alsoKnownAs")),
-                    jsonObject.getString("placeOfOrigin"),
-                    jsonObject.getString("description"),
-                    jsonObject.getString("image"),
-                    getListFromJSONArray(jsonObject.getJSONArray("ingredients"))
+            return new Sandwich(name.optString("mainName"),
+                    getListFromJSONArray(name.optJSONArray("alsoKnownAs")),
+                    jsonObject.optString("placeOfOrigin"),
+                    jsonObject.optString("description"),
+                    jsonObject.optString("image"),
+                    getListFromJSONArray(jsonObject.optJSONArray("ingredients"))
             );
         } catch (JSONException e) {
             e.printStackTrace();
@@ -36,11 +36,7 @@ public class JsonUtils {
         ArrayList<String> listData = new ArrayList<>();
         if (jsonArray != null) {
             for (int i = 0; i< jsonArray.length(); i++){
-                try {
-                    listData.add(jsonArray.getString(i));
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+                listData.add(jsonArray.optString(i));
             }
         }
         return listData;
