@@ -1,4 +1,7 @@
 # Sandwish Club
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9278a522b7b44350bf8581131d486429)](https://app.codacy.com/app/DasserBasyouni/sandwichClubApp?utm_source=github.com&utm_medium=referral&utm_content=DasserBasyouni/sandwichClubApp&utm_campaign=Badge_Grade_Dashboard)
+
 An app to show the details of each sandwich once it is selected.
 
 -  [x]  Passed thought [Udacity's PROJECT SPECIFICATION: Sandwich Club rubric](https://review.udacity.com/#!/rubrics/1348/view)
