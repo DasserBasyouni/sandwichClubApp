@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -125,5 +125,5 @@
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
